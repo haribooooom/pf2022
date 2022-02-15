@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: Portfolio2022 ( Portfolio )
 Author: NOMA
@@ -20,6 +21,11 @@ ol li,
 ul li {
   list-style: none;
   line-height: 2;
+}
+
+img {
+  -webkit-box-shadow: 0px 6px 16px rgba(106, 106, 106, 0.2);
+          box-shadow: 0px 6px 16px rgba(106, 106, 106, 0.2);
 }
 
 a:-webkit-any-link {
@@ -80,17 +86,14 @@ a:-webkit-any-link {
 
 .inner {
   margin: 0 auto;
+  padding: 4%;
 }
 
 @media screen and (min-width: 1024px) {
   .inner {
     width: 60vw;
+    padding: 0%;
   }
-}
-
-.wh {
-  background-color: #fff;
-  padding: 24px;
 }
 
 h2 {
@@ -148,6 +151,8 @@ header {
 
 .logo img {
   height: 48px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 /* intro */
@@ -156,24 +161,14 @@ header {
 }
 
 .box {
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 6%;
-}
-
-@media screen and (min-width: 1024px) {
-  .box {
-    width: 60vw;
-    padding: 0%;
-  }
-}
-
-.text {
-  margin: 0 auto;
+  padding: 3%;
+  -webkit-box-shadow: 0px 6px 16px rgba(106, 106, 106, 0.2);
+          box-shadow: 0px 6px 16px rgba(106, 106, 106, 0.2);
+  background-color: #fff;
 }
 
 .text p {
@@ -241,49 +236,59 @@ main.work {
   }
 }
 
+.pj_box {
+  margin-bottom: 24px;
+  padding: 3%;
+  -webkit-box-shadow: 0px 6px 16px rgba(106, 106, 106, 0.2);
+          box-shadow: 0px 6px 16px rgba(106, 106, 106, 0.2);
+  background-color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .pj_box {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .wrap {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin-bottom: 80px;
   }
 }
 
 .block {
-  padding: 4%;
   margin-bottom: 80px;
 }
 
 @media screen and (min-width: 1024px) {
   .block {
-    width: 35vw;
-    background-color: #b0c81c;
+    width: 40%;
+    height: 100vh;
+    position: -webkit-sticky;
+    /*Safari用*/
+    position: sticky;
+    top: 32px;
   }
 }
 
 .block img {
   width: 100%;
-}
-
-@media screen and (min-width: 1024px) {
-  .block img {
-    width: auto;
-  }
-}
-
-.block .box,
-.block .text {
-  padding: 8px;
-  margin-bottom: px;
+  margin-bottom: 32px;
 }
 
 @media screen and (min-width: 1024px) {
   .disc {
-    width: 35vw;
-    background-color: #1c8ac8;
+    width: calc(60% - 40px);
+    min-height: 100vh;
   }
 }
 /*# sourceMappingURL=style.css.map */
