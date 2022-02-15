@@ -20,7 +20,21 @@ $shadow: 0px 6px 16px rgba(106, 106, 106, 0.2);
 $border: 1px solid #aaa;
 
 body {
+  margin: 0;
   background: url(/img/bg.svg);
+}
+
+ol,
+ul {
+  padding-left: 0;
+  li {
+    list-style: none;
+    line-height: 2;
+  }
+}
+
+a {
+  text-decoration: none;
 }
 
 //layout-size
@@ -50,7 +64,9 @@ body {
 
 .inner {
   margin: 0 auto;
-  // padding: 4%;
+  @include mq-pc {
+    width: 60vw;
+  }
 }
 
 .wh {
@@ -61,10 +77,10 @@ body {
 h2 {
   text-align: center;
   margin-bottom: 20px;
-  font-size: 2rem;
+  // font-size: 2rem;
 }
 h3 {
-  font-size: 1.6rem;
+  // font-size: 1.6rem;
 }
 
 /* header */
@@ -75,8 +91,8 @@ header {
   position: fixed;
   top: 0;
   align-items: center;
-  padding: 8px 24px;
   z-index: 99999;
+  padding: 8px 24px;
 }
 
 .menu {
@@ -84,15 +100,16 @@ header {
     display: flex;
     flex-direction: row;
     font-size: 1.5rem;
+    @include mq-pc {
+      padding-right: 24px;
+    }
   }
   li {
-    margin-left: 16px;
     a {
       padding: 16px;
       color: $wh;
       font-weight: 600;
       text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
-      /* background-color: aquamarine; */
     }
   }
 }
@@ -110,11 +127,9 @@ header {
   display: flex;
   justify-content: center;
   padding: 6%;
-  border-radius: 2ch;
-  border: 1px solid hsl(0 0% 83%);
-  box-shadow: 0 2.5rem 2rem -2rem hsl(200 50% 20% / 80%);
   @include mq-pc {
     width: 60vw;
+    padding: 0%;
   }
 }
 
@@ -128,12 +143,11 @@ header {
 
 .contents {
   margin: 0 auto;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 4%;
   @include mq-pc {
     max-width: 1080px;
+    padding: 0;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -142,9 +156,16 @@ header {
 .content {
   margin-bottom: 24px;
   img {
-    // width: 100%;
+    width: 100%;
     @include mq-pc {
-      // width: auto;
+      padding: 0;
     }
   }
+}
+
+footer {
+  padding: 8px;
+  text-align: center;
+  background-color: $bl;
+  color: $wh;
 }
