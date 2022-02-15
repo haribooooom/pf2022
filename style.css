@@ -21,7 +21,7 @@ ul li {
   line-height: 2;
 }
 
-a {
+a:-webkit-any-link {
   text-decoration: none;
 }
 

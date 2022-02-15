@@ -842,7 +842,7 @@ a:-webkit-any-link {
     cursor: auto;
 }
 a:-webkit-any-link:active {
-    color: -webkit-activelink
+    /* color: -webkit-activelink */
 }
 /* HTML5 ruby elements */
 ruby, rt {
