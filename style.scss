@@ -184,6 +184,7 @@ main.work {
 .pj {
   margin: 0 auto;
   margin-top: 100px;
+  padding: 0 4%;
   @include mq-pc {
     max-width: 1080px;
   }
